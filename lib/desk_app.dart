@@ -1,3 +1,4 @@
+import 'package:desk/hinge_view.dart';
 import 'package:desk/ink.dart';
 import 'package:desk/terminal_view.dart';
 import 'package:flutter/gestures.dart';
@@ -16,7 +17,14 @@ class DeskScrollBehavior extends MaterialScrollBehavior {
 }
 
 class DeskApp extends StatelessWidget {
-  const DeskApp({super.key});
+  const DeskApp({
+    super.key,
+    this.openHinge = false,
+    this.demo = HingeDemo.rest,
+  });
+
+  final bool openHinge;
+  final HingeDemo demo;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +42,12 @@ class DeskApp extends StatelessWidget {
           primary: DeskInk.amber,
         ),
       ),
-      home: const TerminalView(),
+      home: openHinge ? HingeView(demo: demo) : const TerminalView(),
+      routes: {'/hinge': _openHinge},
     );
   }
+}
+
+Widget _openHinge(BuildContext context) {
+  return const HingeView();
 }
