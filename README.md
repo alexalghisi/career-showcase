@@ -2,7 +2,7 @@
 
 Terminal desk for Alghisi Alessandro Paolo. It opens on `cat about_me.txt`. Type `hinge` and the same roles become a sheet of paper: two pins scale it and turn it, and the point between the pins stays where it is.
 
-**Release, already built:** [open the desk](http://127.0.0.1:43123/) · [open the sheet](http://127.0.0.1:43123/?open=hinge&pose=turned)
+**Site:** [alexalghisi.github.io/career-showcase](https://alexalghisi.github.io/career-showcase/) · [sheet](https://alexalghisi.github.io/career-showcase/?open=hinge&pose=turned)
 
 The same build is in this repository, under `release/web`. No toolchain required:
 
@@ -73,4 +73,4 @@ flutter test integration_test/desk_flow_test.dart -d <device>
 
 `.github/workflows/check.yml` analyzes, tests, and builds on every push. `.github/workflows/pages.yml` publishes `main`. In the repository settings, set Pages to GitHub Actions.
 
-A user site is [alexalghisi.github.io](https://alexalghisi.github.io/). A project site is `https://alexalghisi.github.io/<repo>/` and needs `--base-href /<repo>/` in that workflow.
+The published site is [alexalghisi.github.io/career-showcase](https://alexalghisi.github.io/career-showcase/). The workflow builds with `--base-href /career-showcase/`.
