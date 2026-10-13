@@ -37,7 +37,7 @@ void main() {
     await tester.pump();
 
     expect(find.text('scale 1.00    fold 0.00'), findsNothing);
-    expect(find.byKey(const Key('sheet-back')), findsOneWidget);
+    expect(find.byKey(const Key('sheet-front')), findsOneWidget);
   });
 
   testWidgets('picking a role reprints that role on the sheet', (tester) async {

@@ -257,22 +257,7 @@ class _HingeViewState extends State<HingeView> {
                 child: SizedBox(
                   width: sheet.width,
                   height: sheet.height,
-                  child: Stack(
-                    children: [
-                      Positioned.fill(
-                        child: Opacity(
-                          opacity: (1 - pose.fold).clamp(0.0, 1.0),
-                          child: _SheetFace(role: role, back: false),
-                        ),
-                      ),
-                      Positioned.fill(
-                        child: Opacity(
-                          opacity: pose.fold.clamp(0.0, 1.0),
-                          child: _SheetFace(role: role, back: true),
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: _SheetFace(role: role, back: pose.fold >= 0.5),
                 ),
               ),
             ),
