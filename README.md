@@ -2,9 +2,19 @@
 
 Terminal desk for Alghisi Alessandro Paolo. It opens on `cat about_me.txt`. Type `hinge` and the same roles become a sheet of paper: two pins scale it and turn it, and the point between the pins stays where it is.
 
+**Release, already built:** [open the desk](http://127.0.0.1:43123/) · [open the sheet](http://127.0.0.1:43123/?open=hinge&pose=turned)
+
+The same build is in this repository, under `release/web`. No toolchain required:
+
+```bash
+./release/serve.sh
+```
+
+That serves [http://127.0.0.1:43123/](http://127.0.0.1:43123/).
+
 ![desk](media/desk.gif)
 
-The stills below are from a local web run of this project.
+The stills below are from that release.
 
 ![terminal](media/desk-terminal.png)
 
@@ -14,7 +24,7 @@ On a phone the same file just wraps.
 
 ![phone](media/desk-phone.png)
 
-## Run
+## Run from source
 
 ```bash
 flutter pub get
@@ -22,16 +32,13 @@ flutter test
 flutter run -d chrome
 ```
 
-A built copy, the one GitHub Pages serves:
+Rebuild the copy that `release/serve.sh` serves:
 
 ```bash
 flutter build web --release --base-href / --no-wasm-dry-run
-python3 -m http.server 43123 -d build/web
+rm -rf release/web
+cp -a build/web release/web
 ```
-
-Open `http://127.0.0.1:43123/`. `http://127.0.0.1:43123/?open=hinge&pose=turned` starts on the sheet, already turned.
-
-For a project site rather than `alexalghisi.github.io`, pass `--base-href /<repo>/`.
 
 ## Commands
 
@@ -64,4 +71,6 @@ flutter test integration_test/desk_flow_test.dart -d <device>
 
 ## Pages
 
-`.github/workflows/check.yml` analyzes, tests, and builds on every push. `.github/workflows/pages.yml` publishes `main` to GitHub Pages. In the repository settings, set Pages to GitHub Actions. A user site (`alexalghisi.github.io`) uses base href `/`. A project site needs `--base-href /<repo>/` in that workflow.
+`.github/workflows/check.yml` analyzes, tests, and builds on every push. `.github/workflows/pages.yml` publishes `main`. In the repository settings, set Pages to GitHub Actions.
+
+A user site is [alexalghisi.github.io](https://alexalghisi.github.io/). A project site is `https://alexalghisi.github.io/<repo>/` and needs `--base-href /<repo>/` in that workflow.
