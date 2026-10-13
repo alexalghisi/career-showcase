@@ -84,7 +84,7 @@ const profile = Profile(
       title: 'Senior full stack, Cluj',
       lines: [
         'Lead features on React, TypeScript and Node.',
-        'LLM copilots in the product: streaming, tool calling, structured JSON.',
+        'LLM assistants in the product: streaming, tool calling, structured JSON.',
         'RAG on pgvector and Pinecone, plus a prompt-evaluation harness.',
       ],
       tools: ['React', 'TypeScript', 'Node.js', 'pgvector', 'Pinecone'],
