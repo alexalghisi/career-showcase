@@ -64,4 +64,4 @@ flutter test integration_test/desk_flow_test.dart -d <device>
 
 ## Pages
 
-`.github/workflows/check.yml` analyzes, tests, and builds the web app on every push.
+`.github/workflows/check.yml` analyzes, tests, and builds on every push. `.github/workflows/pages.yml` publishes `main` to GitHub Pages. In the repository settings, set Pages to GitHub Actions. A user site (`alexalghisi.github.io`) uses base href `/`. A project site needs `--base-href /<repo>/` in that workflow.
