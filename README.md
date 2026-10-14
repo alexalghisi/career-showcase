@@ -1,8 +1,8 @@
 # alexalghisi
 
-CV for Alessandro Paolo Alghisi. The same layout as the 2026 resume: portrait and stack on the left, roles on the right. Plain text a search engine can read.
+CV for Alessandro Paolo Alghisi. The roles are on the left. The right column is a short brief for HR: the portrait and the experience that matters in a first read. Plain text a search engine can read.
 
-**Site:** [alexalghisi.github.io/career-showcase](https://alexalghisi.github.io/career-showcase/)
+**Site:** [alexalghisi.github.io](https://alexalghisi.github.io/)
 
 Preview it locally:
 
@@ -20,7 +20,7 @@ On a phone the portrait and the highlights sit above the roles.
 
 ## Pages
 
-`.github/workflows/pages.yml` publishes the `site/` folder from `main`.
+The live page is [alexalghisi.github.io](https://alexalghisi.github.io/), from the `alexalghisi.github.io` repository. `career-showcase` only redirects there.
 
 ## Desk
 
