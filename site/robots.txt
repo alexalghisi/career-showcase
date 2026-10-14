@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alexalghisi.github.io/career-showcase/sitemap.xml
