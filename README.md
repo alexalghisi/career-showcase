@@ -1,6 +1,6 @@
 # alexalghisi
 
-CV for Alghisi Alessandro Paolo. Plain text a search engine can read: the name, the roles, a portrait, and a short highlight column.
+CV for Alessandro Paolo Alghisi. The same layout as the 2026 resume: portrait and stack on the left, roles on the right. Plain text a search engine can read.
 
 **Site:** [alexalghisi.github.io/career-showcase](https://alexalghisi.github.io/career-showcase/)
 
